@@ -31,7 +31,7 @@ exports.create = (req, res) => {
  * Find all Users
  */
 exports.findAll = (req, res) => {
-    ContactV2.find()
+    ContactV2.find({},{_id:0, __v: 0})
     .then((data) => {
       // console.log(res)
       // res.status(200).send(data);
